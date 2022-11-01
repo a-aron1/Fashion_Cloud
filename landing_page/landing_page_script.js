@@ -2,6 +2,8 @@ const trendingUrl = "https://dummyjson.com/products/category/tops"
 const menUrl = "https://dummyjson.com/products/category/mens-shirts";
 const womenUrl = "https://dummyjson.com/products/category/womens-dresses";
 
+const womenClothes = "https://fakestoreapi.com/products/category/men's%20clothing"
+
 async function generateProducts(url, sectionName) {
     const response = await fetch(url);
     const data = await response.json();
@@ -24,7 +26,7 @@ async function generateProducts(url, sectionName) {
 
         const cardText = document.createElement("p");
         cardText.classList.add("card-text");
-        cardText.appendChild(document.createTextNode(product.price));
+        cardText.appendChild(document.createTextNode(`$${product.price}`));
 
         cardBody.append(cardTitle, cardText);
         card.append(img, cardBody);
