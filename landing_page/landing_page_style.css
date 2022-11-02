@@ -77,6 +77,10 @@ a {
     margin-bottom: 0;
 }
 
+.card-text {
+    color: rgb(103, 103, 103);
+}
+
 @media only screen and (max-width: 768px){
     .carousel-inner {
         max-width: 100%;

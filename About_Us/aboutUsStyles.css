@@ -37,17 +37,18 @@
     padding-left: 20%;
 }
 
-.card {
+.memberCard {
+    background-color: #e9eff5;
     max-width: 250px;
     margin: auto;
     text-align: center;
 }
 
-.card > img {
+.memberCard > img {
     border-radius: 50%;
     width: 100%;
 }
 
-.card > h3 {
+.memberCard > h3 {
     font-style: normal;
 }

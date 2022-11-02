@@ -36,6 +36,11 @@ body {
   margin-bottom: 0;
 }
 
+.card-body > h5 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 /* Pagination */
 .pagination {
   display: flex;
