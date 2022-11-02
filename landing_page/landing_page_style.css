@@ -8,7 +8,10 @@ body {
 }
 
 h4 {
+    font-family: 'Archivo Black', sans-serif;
     font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 a {
@@ -72,8 +75,8 @@ a {
 }
 
 .card-title {
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 900;
     margin-bottom: 0;
 }
 
