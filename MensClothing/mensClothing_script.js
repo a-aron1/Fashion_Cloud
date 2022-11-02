@@ -1,4 +1,3 @@
-//men.addEventListener("click", getWomensClothing);
 const API = "https://dummyjson.com/products/category/";
 const menCategory = ["mens-shirts", "mens-shoes"];
 
@@ -20,9 +19,9 @@ async function getWomensClothing() {
       const photoDescription = photo.title;
       const price = `$ ${photo.price}`;
 
-      const capitalizedPhotoDes =
-        photoDescription.charAt(0).toUpperCase() +
-        photoDescription.slice(1).toLowerCase();
+      const capitalizedPhotoDes = photoDescription
+        .toLowerCase()
+        .replace(/(?<=\b)\w/g, (match) => match.toUpperCase());
 
       // create  card
       const card = document.createElement("div");
@@ -37,10 +36,21 @@ async function getWomensClothing() {
       const cardBody = document.createElement("div");
       cardBody.classList.add("card-body");
 
+      // Link to product
+      const linkProduct = document.createElement("a");
+      linkProduct.classList.add("product-link");
+      linkProduct.textContent = capitalizedPhotoDes;
+      linkProduct.href = "../product_page/product_page.html";
+      linkProduct.setAttribute("id", photo.id);
+      linkProduct.addEventListener("click", (e) => {
+        window.localStorage.setItem("productId", e.target.id);
+      });
+
       const cardTitle = document.createElement("h5");
       cardTitle.classList.add("card-title");
-      cardTitle.textContent = capitalizedPhotoDes;
+      // cardTitle.textContent = capitalizedPhotoDes;
       cardBody.appendChild(cardTitle);
+      cardTitle.appendChild(linkProduct);
 
       const cardSubTitle = document.createElement("h6");
       cardSubTitle.setAttribute("class", "card-text, text-muted");
