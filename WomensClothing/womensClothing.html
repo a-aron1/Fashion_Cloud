@@ -20,8 +20,69 @@
     />
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./womensClothing_style.css" />
+    <!-- <link rel="stylesheet" href="../Nav Bar/style.css"> -->
+    <link rel="stylesheet" href="../landing_page/landing_page_style.css">
   </head>
   <body>
+
+        <!--  Nav Bar STARTS here -->
+
+    <!-- Bootstrap nav-bar -->
+    <nav class="navbar navbar-expand-lg bg-light navbar navbar-light navbar-expand-md bg-faded">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+          
+          <!-- image link -->
+          <a class="navbar-brand d-flex w-50 mr-auto" href="../index.html">
+          <img src="../Images/Fashion_Cloud_image_01.png" alt="..." height="50">
+        </a>
+          
+          <ul class="nav navbar-nav ml-auto w-100 justify-content-center">
+              <li class="nav-item">
+                  <form class="d-flex" role="search">
+
+                      <!-- //search field -->
+                  <div class = "searchBarClass_1">
+                    <input class="form-control me-2" type="search" placeholder="Search Products" aria-label="Search">
+                  </div>
+                  <div class = "searchIcon"></div>
+                    <input type="image" src="../Images/search_icon.png" alt="Submit" width="48" height="48">
+                  
+                    <!-- will use a image instead of a button -->
+                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                  
+                  </form>  
+              </li>
+          </ul>
+
+          <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="../Images/shopping_cart.png" alt="Please search again" width="48" height="48"></a>
+              </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+  
+    <div id = "lowerNavBar">
+    <ul>
+        <li>
+          <a href="../index.html">HOME &nbsp<a> <!-- &nbsp adds spacing -->
+        </li>
+        <li>
+          <a href="../MensClothing/mensClothing.html">MEN'S CLOTHING &nbsp</a> <!-- &nbsp adds spacing -->
+        </li>
+        <li>
+          <a href="../WomensClothing/womensClothing.html">WOMEN'S CLOTHING</a>
+        </li>
+      </ul>
+     </div>
+
+  <!--  Nav Bar ENDS here -->
+
     <div class="container">
       <h3 id="women">Women's Clothing</h3>
       <div
@@ -37,6 +98,31 @@
         <li class="page-item"><h2>4</h2></li>
       </div>
     </div>
+
+      <!-- Footer Begin -->
+      <footer id="footer" class="footer mt-auto py-3 bg-light">
+        <div class="footercontainer">                
+          <span class="footer_flex" id="footer_info"> 
+            <a class="footerurl" href="../index.html"> 
+              <img src="../Images/Fashion_Cloud_image_01.png" alt="Fashion_cloud_icon" height="45" >
+            </a>
+          </span>
+          <div class="footerlinks">
+            <a class="footerurl" href="../About_Us/aboutUs.html">About Us
+            </a>  
+            <a class="footerurl" href="../Contact_Us/contactUs.html">Contact Us
+            </a>  
+            <a class="footerurl" href="../MensClothing/mensClothing.html">Men's Clothing
+            </a>  
+            <a class="footerurl" href="../WomensClothing/womensClothing.html">Women's Clothing
+            </a>        
+          </div>
+        </div>
+  
+        <div class="contact-info bottom-msg" id="divBottomMsg"><marquee id="ext-gen1169">All rights reserved by Fashion Cloud 2022.</marquee>
+        </div>
+      </footer>
+      <!-- Footer End -->
 
     <!-- Custom Script -->
     <script src="./womensClothing_script.js"></script>
