@@ -11,12 +11,16 @@
     margin-left: 30px;
 }
 
-nav {
-    border-bottom: 1px solid black;
+.bottomLineNav {
+    border-bottom: 1px solid rgb(156, 155, 155);
 }
 
 #lowerNavBar {
-    justify-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
 }
 
 #lowerNavBar li {
@@ -29,6 +33,10 @@ nav {
 
 a:link {
     text-decoration: none;
+}
+
+.lowerMenuTextColor {
+    color: black;
 }
 
 a {
