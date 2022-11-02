@@ -11,6 +11,11 @@ h4 {
     font-weight: 600;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 /* ============== */
 /*    CAROUSEL    */
 /* ============== */
@@ -41,8 +46,7 @@ h4 {
 }
 
 .card-items {
-    height: auto;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none; /* Firefox */

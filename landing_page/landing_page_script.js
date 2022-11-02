@@ -1,26 +1,29 @@
-const trendingUrl = "https://dummyjson.com/products/category/tops"
-const menUrl = "https://dummyjson.com/products/category/mens-shirts";
-const womenUrl = "https://dummyjson.com/products/category/womens-dresses";
-
-async function generateProducts(url, sectionName) {
-    const response = await fetch(url);
+async function generateProducts(categoryName, sectionName) {
+    const response = await fetch(`https://dummyjson.com/products/category/${categoryName}`);
     const data = await response.json();
-    // title, price, thumbnail
 
-    for (product of data.products) {    
+    for (product of data.products) {
+        
         const card = document.createElement("div");
         card.classList.add("card");
-
+        
         const img = document.createElement("img");
         img.classList.add("card-img-top");
         img.src = product.thumbnail;
-
+        
         const cardBody = document.createElement("div");
         cardBody.classList.add("card-body");
+        
+        const linkProduct = document.createElement("a");
+        linkProduct.href = "../product_page/product_page.html";
+        linkProduct.appendChild(document.createTextNode(product.title));
 
         const cardTitle = document.createElement("h5");
         cardTitle.classList.add("card-title");
-        cardTitle.appendChild(document.createTextNode(product.title));
+        cardTitle.appendChild(linkProduct);
+        cardTitle.addEventListener("click", () => {
+            window.localStorage.setItem("productId", JSON.stringify(product.id));
+        })
 
         const cardText = document.createElement("p");
         cardText.classList.add("card-text");
@@ -32,6 +35,6 @@ async function generateProducts(url, sectionName) {
     }
 } 
 
-generateProducts(trendingUrl, trending);
-generateProducts(menUrl, mens_clothing);
-generateProducts(womenUrl, womens_clothing);
+generateProducts("tops", trending);
+generateProducts("mens-shirts", mens_clothing);
+generateProducts("womens-dresses", womens_clothing);
