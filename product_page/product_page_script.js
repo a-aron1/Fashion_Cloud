@@ -8,6 +8,8 @@ async function generateProduct() {
         const img = document.createElement("img");
         img.src = data.images[0];
         product_img.appendChild(img);
+        const starImg = document.createElement("img");
+        starImg.src = "../Images/star.png";
     
         const category = createItems("p", data.category, "category");
         const title = createItems("h3", data.title);
@@ -15,7 +17,7 @@ async function generateProduct() {
         const price = createItems("p", `$${data.price}`, "price");
         const description = createItems("p", data.description, "description");
     
-        product_text.append(category, title, rating, price, description);
+        product_text.append(category, title, rating, starImg, price, description);
         
     } catch (error) {
         console.error(error);
