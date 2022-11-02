@@ -38,6 +38,9 @@ function createItems(tagName, className, textNode) {
     return element;
 }
 
+generateProducts("womens-bags", trending);
 generateProducts("tops", trending);
 generateProducts("mens-shirts", mens_clothing);
+generateProducts("mens-shoes", mens_clothing);
 generateProducts("womens-dresses", womens_clothing);
+generateProducts("womens-shoes", womens_clothing);
