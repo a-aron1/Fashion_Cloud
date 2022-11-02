@@ -19,13 +19,14 @@ h3 {
 
 #product_img {
     width: 40rem;
+    max-height: 40rem;
     margin: 1.5rem;
 }
 
 #product_img > img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
 }
 
 #product_content {
@@ -37,7 +38,7 @@ h3 {
 }
 
 #product_text {
-    height: 70%;
+    height: 80%;
 }
 
 #product_text > img {
