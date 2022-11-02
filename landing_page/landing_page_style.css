@@ -1,14 +1,19 @@
-/* * {
-    outline: solid 1px red;
-} */
-
 body {
     background-color: #E9EFF5;
     font-family: 'Roboto';
 }
 
 h4 {
+    font-family: 'Archivo Black', sans-serif;
     font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* ============== */
@@ -17,12 +22,12 @@ h4 {
 
 .carousel-inner {
     max-width: 70vw;
-    max-height: 50vh;
+    /* height: 80vh; */
     margin: auto;
 }
 
 .carousel-item > img {
-    max-height: 50vh;
+    max-height: 70vh;
     object-fit: cover;
 }
 
@@ -41,8 +46,7 @@ h4 {
 }
 
 .card-items {
-    height: auto;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none; /* Firefox */
@@ -68,14 +72,12 @@ h4 {
 }
 
 .card-title {
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 900;
     margin-bottom: 0;
 }
 
-/* Mobile Design */
-
-@media only screen and (max-width: 575.98px){
+@media only screen and (max-width: 768px){
     .carousel-inner {
         max-width: 100%;
     }
