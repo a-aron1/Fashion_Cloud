@@ -29,6 +29,31 @@ h3 {
     background-color: white;
 }
 
+#category, #rating, #price {
+    font-size: 1.3rem;
+    color: rgb(116, 116, 116);
+}
+
+#price {
+    font-weight: 600;
+}
+
+h3, #rating {
+    display: inline;
+}
+
+#rating {
+    margin-left: 1rem;
+}
+
+#category {
+    margin-bottom: 0;
+}
+
 .input-group {
     width: 60px;
+}
+
+.form-label {
+    font-weight: 600;
 }

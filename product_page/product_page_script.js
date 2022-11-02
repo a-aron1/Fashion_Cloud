@@ -12,7 +12,7 @@ async function generateProduct() {
         const category = createItems("p", data.category, "category");
         const title = createItems("h3", data.title);
         const rating = createItems("p", data.rating, "rating");
-        const price = createItems("p", data.price, "price");
+        const price = createItems("p", `$${data.price}`, "price");
         const description = createItems("p", data.description, "description");
     
         product_text.append(category, title, rating, price, description);
