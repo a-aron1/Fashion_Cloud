@@ -4,6 +4,7 @@ async function generateProducts(categoryName, sectionName) {
         const data = await response.json();
     
         for (product of data.products) {
+            const fixedTitle = product.title.toLowerCase().replace((/(?<=\b)\w/g), match => match.toUpperCase());
             
             const card = createItems("div","card");
     
@@ -12,7 +13,7 @@ async function generateProducts(categoryName, sectionName) {
             
             const cardBody = createItems("div","card-body");
     
-            const linkProduct = createItems("a", "product-link", product.title);
+            const linkProduct = createItems("a", "product-link", fixedTitle);
             linkProduct.href = "../product_page/product_page.html";
             linkProduct.setAttribute("id", product.id);
             linkProduct.addEventListener("click", (e) => {
