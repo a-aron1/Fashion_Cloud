@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchBarClass_1 {
+    width: 400px;
+}
+
+.searchIcon {
+    margin-left: 30px;
+}
+
+nav {
+    border-bottom: 1px solid black;
+}
+
+#lowerNavBar {
+    justify-items: center;
+}
+
+#lowerNavBar li {
+    display: inline-block;
+}
+
+#lowerNavBar ul {
+    width: 100%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
