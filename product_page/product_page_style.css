@@ -12,7 +12,7 @@ h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     height: auto;
     margin: 10vh auto ;
 }
@@ -48,7 +48,7 @@ h3 {
 }
 
 #category, #rating, #price {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: rgb(116, 116, 116);
 }
 
@@ -73,18 +73,23 @@ h3, #rating {
 #quantity-form {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .input-group {
-    /* align-self: flex-start; */
+    display: flex;
+    justify-content: center;
     width: 60px;
 }
 
 .add-cart-btn {
-    align-self: center;
+    width: 10rem;
+    height: 3rem;
+    margin: 0 auto;
+    font-size: 1.3rem;
 }
 
 .form-label {
+    font-size: 1.3rem;
     font-weight: 600;
 }
