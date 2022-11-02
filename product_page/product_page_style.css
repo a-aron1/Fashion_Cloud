@@ -12,13 +12,12 @@ h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* max-width: 1400px; */
     height: auto;
     margin: 10vh auto ;
 }
 
 #product_img {
-    width: 40rem;
+    max-width: 40rem;
     max-height: 40rem;
     margin: 1.5rem;
 }
