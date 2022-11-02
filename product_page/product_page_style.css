@@ -2,3 +2,33 @@ body {
     background-color: #E9EFF5;
     font-family: 'Roboto';
 }
+
+h3 {
+    font-weight: 600;
+}
+
+#product_container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70vw;
+    margin: auto;
+}
+
+#product_img {
+    width: 40%;
+}
+
+#product_img > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#product_content {
+    width: 40%;
+    padding: 2rem;
+    background-color: white;
+}
+
+.input-group {
+    width: 60px;
+}
