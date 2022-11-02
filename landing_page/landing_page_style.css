@@ -82,3 +82,40 @@ a {
         max-width: 100%;
     }
 }
+
+/* Footer Style Begin */
+footer {
+    position:relative;
+    bottom:0;
+    left:0;
+    right:0;
+    height:80px;
+    font-family: 'Roboto', sans-serif;
+    }
+    .footerurl:link { text-decoration: none; }
+    
+    .footerurl {
+        color: black
+    }
+    
+    .footercontainer
+     {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .footerlinks {
+        min-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+      }
+      .footerlinks > a {
+        display: flex; 
+        flex-basis: calc(50% - 10px);  
+        justify-content: center;
+        flex-direction: column;
+      }
+
+/* Footer Style End */
