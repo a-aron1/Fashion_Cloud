@@ -1,15 +1,7 @@
 // Redirect to product page
 // On click => extract ID
 
-const cards = document.querySelectorAll(".card");
-cards.forEach(item => {
-    item.addEventListener("click", () =>{
-        window.location.replace("product_page/product_page.html");
-        generateProduct(item.id);
-        console.log("Clicked")
-    })
-})
-
+let productId = window.localStorage.getItem("productId");
 // async function generateProduct(productId) {
 //     const response = await fetch(`https://dummyjson.com/products/${productId}`);
 //     const data = await response.json();
@@ -20,7 +12,7 @@ cards.forEach(item => {
 // }
 
 async function generateProduct() {
-    const response = await fetch("https://dummyjson.com/products/1");
+    const response = await fetch(`https://dummyjson.com/products/${productId}`);
     const data = await response.json();
 
     const img = document.createElement("img");
@@ -34,6 +26,7 @@ async function generateProduct() {
     const description = createItems("p", data.description);
 
     product_content.append(category, title, rating, price, description);
+    // window.localStorage.clear();
 }
 
 function createItems(tagName, textNode) { 

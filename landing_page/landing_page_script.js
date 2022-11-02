@@ -17,13 +17,14 @@ async function generateProducts(categoryName, sectionName) {
         const linkProduct = document.createElement("a");
         linkProduct.href = "../product_page/product_page.html";
         linkProduct.appendChild(document.createTextNode(product.title));
+        linkProduct.setAttribute("id", product.id);
+        linkProduct.addEventListener("click", (e) => {
+            window.localStorage.setItem("productId", e.target.id);
+        })
 
         const cardTitle = document.createElement("h5");
         cardTitle.classList.add("card-title");
         cardTitle.appendChild(linkProduct);
-        cardTitle.addEventListener("click", () => {
-            window.localStorage.setItem("productId", JSON.stringify(product.id));
-        })
 
         const cardText = document.createElement("p");
         cardText.classList.add("card-text");
