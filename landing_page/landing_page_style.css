@@ -1,6 +1,7 @@
 body {
     background-color: #E9EFF5;
     font-family: 'Roboto';
+    min-height: 99vh;
 }
 
 h4 {
@@ -107,6 +108,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: center;
     }
     .footerlinks {
         min-height: 100%;
