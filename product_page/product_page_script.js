@@ -37,6 +37,17 @@ function fixName(name) {
     return name.toLowerCase().replace((/(?<=\b)\w/g), match => match.toUpperCase());
 }
 
+const cartBtn = document.getElementById("add-cart-btn");
+cartBtn.addEventListener("click", () => {
+    let quantity = document.querySelector(".form-select").value;
+    let products = [];
+    if (localStorage.getItem("products")) {
+        products = JSON.parse(localStorage.getItem("products"));
+    }
+    products.push({"productId" : productId, "quantity": quantity});
+    localStorage.setItem("products", JSON.stringify(products));
+})
+
 generateProduct();
 
 // alert for add to cart
