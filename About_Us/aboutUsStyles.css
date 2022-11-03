@@ -1,6 +1,7 @@
 #aboutUs {
     background-color: #e9eff5;
-    padding-top: 55px;
+    padding-top: 5%;
+    padding-bottom: 15%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -41,7 +42,6 @@
     background-color: #e9eff5;
     max-width: 250px;
     margin: auto;
-    text-align: center;
 }
 
 .memberCard > img {
@@ -51,4 +51,5 @@
 
 .memberCard > h3 {
     font-style: normal;
+    text-align: center;
 }

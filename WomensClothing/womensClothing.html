@@ -20,7 +20,7 @@
     />
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./womensClothing_style.css" />
-    <!-- <link rel="stylesheet" href="../Nav Bar/style.css"> -->
+    <link rel="stylesheet" href="../NavBar/style.css">
     <link rel="stylesheet" href="../landing_page/landing_page_style.css">
   </head>
   <body>
@@ -28,35 +28,27 @@
         <!--  Nav Bar STARTS here -->
 
     <!-- Bootstrap nav-bar -->
-    <nav class="navbar navbar-expand-lg bg-light navbar navbar-light navbar-expand-md bg-faded">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg bg-light navbar navbar-light navbar-expand-md bg-faded bottomLineNav">
+      <div class="container navContainer">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
         <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
           
           <!-- image link -->
-          <a class="navbar-brand d-flex w-50 mr-auto" href="../index.html">
-          <img src="../Images/Fashion_Cloud_image_01.png" alt="..." height="50">
-        </a>
-          
-          <ul class="nav navbar-nav ml-auto w-100 justify-content-center">
-              <li class="nav-item">
-                  <form class="d-flex" role="search">
+          <a class="navbar-brand col-4" href="../index.html">
+            <img src="../Images/Fashion_Cloud_image_01.png" alt="..." height="50">
+          </a>     
 
-                      <!-- //search field -->
-                  <div class = "searchBarClass_1">
-                    <input class="form-control me-2" type="search" placeholder="Search Products" aria-label="Search">
-                  </div>
-                  <div class = "searchIcon"></div>
-                    <input type="image" src="../Images/search_icon.png" alt="Submit" width="48" height="48">
-                  
-                    <!-- will use a image instead of a button -->
-                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                  
-                  </form>  
-              </li>
-          </ul>
+          <form class="d-flex col-4" role="search">
+            <!-- //search field -->
+            <div class = "searchBarClass_1 me-3">
+              <input class="form-control" type="search" placeholder="Search Products" aria-label="Search">
+            </div>
+            <input type="image" src="../Images/search_icon.png" alt="Submit" width="45" height="45">
+            <!-- will use a image instead of a button -->
+            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+          </form>  
 
           <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
               <li class="nav-item">
@@ -65,25 +57,28 @@
           </ul>
         </div>
       </div>
-  </nav>
-  
-    <div id = "lowerNavBar">
-    <ul>
-        <li>
-          <a href="../index.html">HOME &nbsp<a> <!-- &nbsp adds spacing -->
-        </li>
-        <li>
-          <a href="../MensClothing/mensClothing.html">MEN'S CLOTHING &nbsp</a> <!-- &nbsp adds spacing -->
-        </li>
-        <li>
-          <a href="../WomensClothing/womensClothing.html">WOMEN'S CLOTHING</a>
-        </li>
-      </ul>
-     </div>
+    </nav>
+    
+    <!--  Updated lowerNavBar -->
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item px-3">
+            <a class="nav-link lowerMenuTextColor" href="../index.html">HOME &nbsp<a> <!-- &nbsp adds spacing -->
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link lowerMenuTextColor" href="../MensClothing/mensClothing.html">MEN'S CLOTHING &nbsp</a> <!-- &nbsp adds spacing -->
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link lowerMenuTextColor" href="../WomensClothing/womensClothing.html">WOMEN'S CLOTHING</a>
+          </li>
+        </ul>
+        
+      </nav>
 
-  <!--  Nav Bar ENDS here -->
+    <!--  Updated lower Bar ENDS here -->
 
-    <div class="container">
+ <!--  Womens Clothing Start -->
+    <div id="womens_container" class="container">
       <h3 id="women">Women's Clothing</h3>
       <div
         id="cards_container"
@@ -98,6 +93,7 @@
         <li class="page-item"><h2>4</h2></li>
       </div>
     </div>
+     <!--  Womens Clothing End -->
 
       <!-- Footer Begin -->
       <footer id="footer" class="footer mt-auto py-3 bg-light">
