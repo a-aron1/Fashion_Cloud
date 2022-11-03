@@ -1,4 +1,55 @@
+body {
+    background-color: #E9EFF5;
+    font-family: 'Roboto';
+}
+
+.main-cart {
+    margin-top: 4rem;
+}
+
 .delete-btn {
     border: none;
     background: transparent;
+}
+
+.cart-item {
+    max-width: 60rem;
+    padding: 1.1rem;
+    background-color: white;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cart-img {
+    width: 20%;
+    object-fit: contain;
+}
+
+.cart-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.form-select {
+    width: 4rem !important;
+}
+
+.cart-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.delete-btn, .item-price {
+    text-align: end;
+}
+
+.item-price, .cart-price {
+    font-size: 1.5rem;
 }

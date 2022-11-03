@@ -16,37 +16,13 @@
 </head>
 <body>
 
-    <main>
-        <h3>Your Items</h3>
-        <div id="cart-container">
-            <div class="row cart-item">
-                <div class="col cart-img"></div>
-                <div class="col cart-text">
-                    <h4>Animal Print</h4>
-                    <form class="quantity-form">
-                        <div class="input-group">
-                            <label for="quantity" class="form-label">Quantity</label>
-                            <select class="form-select">
-                                <option value="1" selected>1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="col cart-price">
-                    <button class="delete-btn">
-                        <span class="material-symbols-outlined">
-                            delete
-                        </span>
-                    </button>
-                    <h6 class="item-price">Price</h6>
-                </div>
-            </div>
+    <main class="d-flex flex-column justify-content-center align-items-center main-cart">
+        <h3 class="d-inline-flex">Your Items</h3>
+        <div id="cart-container" class="col d-flex justify-content-center">
         </div>
         <div>
-            <h5>Total:</h5>
-            <h6 id="total-price" class="cart-price"></h6>
+            <h5 class="d-inline-flex">Total:</h5>
+            <h6 id="total-price" class="d-inline-flex cart-price"></h6>
         </div>
         <button id="add-cart-btn" type="button" class="btn btn-dark">Proceed to Checkout</button>
     </main>

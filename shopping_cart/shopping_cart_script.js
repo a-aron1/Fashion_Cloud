@@ -17,6 +17,7 @@ async function generateCart() {
                 cartImg.src = data.thumbnail;
 
                 const cartText = createItems("div", ...[,], "cart-text");
+                cartText.classList.add("col");
                     const cartHeader = createItems("h4", fixedTitle, ...[,]);
                     const quantityForm = createItems("form", ...[,], "quantity-form");
                         const inputGrp = createItems("div", ...[,], "input-group");
@@ -26,7 +27,7 @@ async function generateCart() {
                     quantityForm.appendChild(inputGrp);
                 cartText.append(cartHeader, quantityForm);
 
-            const cartPrice = createItems("div", ...[,], "col");
+            const cartPrice = createItems("div", ...[,], "col-2");
                 cartPrice.classList.add("cart-price");
                     const deleteBtn = createItems("button", ...[,], "delete-btn");
                         const deleteIcon = createItems("span", "delete", "material-symbols-outlined");
@@ -38,7 +39,7 @@ async function generateCart() {
             cartCont.appendChild(cartItem);
 
             totalPrice += data.price * product.quantity;
-            totalText.textContent = totalPrice;
+            totalText.textContent = `$${totalPrice}`;
         }
     } catch (error) {
         console.error(error);
