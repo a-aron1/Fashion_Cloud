@@ -82,11 +82,12 @@ h3, #rating {
     width: 60px;
 }
 
-.add-cart-btn {
+#add-cart-btn {
     width: 10rem;
     height: 3rem;
     margin: 0 auto;
     font-size: 1.3rem;
+    border-radius: 40px;
 }
 
 .form-label {
