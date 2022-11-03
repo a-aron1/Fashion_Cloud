@@ -3,18 +3,36 @@ body {
     font-family: 'Roboto';
 }
 
-.main-cart {
-    margin-top: 4rem;
+h3 {
+    font-weight: 600;
 }
 
-.delete-btn {
-    border: none;
-    background: transparent;
+h4 {
+    font-weight: 600;
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-right: 2rem;
+    margin-bottom: 0;
+}
+
+.main-cart {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
 }
 
 .cart-item {
     max-width: 60rem;
     padding: 1.1rem;
+    margin-top: 1.2rem;
     background-color: white;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -33,7 +51,10 @@ body {
 .input-group {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+}
+
+.form-label {
+    font-size: 1.3rem;
 }
 
 .form-select {
@@ -50,6 +71,29 @@ body {
     text-align: end;
 }
 
+.delete-btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
 .item-price, .cart-price {
     font-size: 1.5rem;
+}
+
+.material-symbols-outlined {
+    font-size: 2.5rem;
+}
+
+#total-cont {
+    display: flex;
+    justify-content: end;
+    max-width: 54rem;
+    padding: 1.1rem;
+}
+
+#checkout-cart-btn {
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 10rem;
 }

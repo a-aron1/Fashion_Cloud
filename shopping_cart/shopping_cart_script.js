@@ -32,6 +32,12 @@ async function generateCart() {
                     const deleteBtn = createItems("button", ...[,], "delete-btn");
                         const deleteIcon = createItems("span", "delete", "material-symbols-outlined");
                         deleteBtn.appendChild(deleteIcon);
+                        deleteBtn.addEventListener("click", (e) => {
+                            e.target.closest(".cart-item").remove();
+                            removeProduct(product.productId);
+                            totalPrice -= data.price * product.quantity;
+                            totalText.textContent = `$${totalPrice}`;
+                        })
                     const price = createItems("h6", `$${data.price}`, "item-price");
                 cartPrice.append(deleteBtn, price);
 
@@ -71,6 +77,11 @@ function createSelectGroup(quantity) {
         formSelect.add(option);
     }
     return formSelect;
+}
+
+function removeProduct(productId) {
+    let remProducts = products.filter(product => product.productId !== productId);
+    localStorage.setItem("products", JSON.stringify(remProducts));
 }
 
 generateCart();
