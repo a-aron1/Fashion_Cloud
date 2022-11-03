@@ -46,6 +46,7 @@ h5 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 1rem;
 }
 
 .input-group {
@@ -79,6 +80,7 @@ h5 {
 
 .item-price, .cart-price {
     font-size: 1.5rem;
+    color: rgb(84, 84, 84);
 }
 
 .material-symbols-outlined {

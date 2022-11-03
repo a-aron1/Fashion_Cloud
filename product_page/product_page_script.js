@@ -34,7 +34,7 @@ function createItems(tagName, textNode, idName) {
 }
 
 function fixName(name) {
-    return name.toLowerCase().replace((/(?<=\b)\w/g), match => match.toUpperCase());
+    return name.toLowerCase().replace((/(?<=\b)\w/g), match => match.toUpperCase()).replaceAll('-', ' ');
 }
 
 const cartBtn = document.getElementById("add-cart-btn");
