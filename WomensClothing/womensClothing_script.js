@@ -2,8 +2,6 @@ const API = "https://dummyjson.com/products/category/";
 const womenCat = ["womens-dresses", "tops"];
 
 async function getWomensClothing() {
-  //e.preventDefault();
-
   try {
     womenCat.map(async (category) => {
       const API_URL_CAT = API + category;
@@ -38,7 +36,7 @@ async function getWomensClothing() {
       const cardBody = document.createElement("div");
       cardBody.classList.add("card-body");
 
-      // Link to product
+      // link to product
       const linkProduct = document.createElement("a");
       linkProduct.classList.add("product-link");
       linkProduct.textContent = capitalizedPhotoDes;
@@ -50,7 +48,6 @@ async function getWomensClothing() {
 
       const cardTitle = document.createElement("h5");
       cardTitle.classList.add("card-title");
-      // cardTitle.textContent = capitalizedPhotoDes;
       cardBody.appendChild(cardTitle);
       cardTitle.appendChild(linkProduct);
 
