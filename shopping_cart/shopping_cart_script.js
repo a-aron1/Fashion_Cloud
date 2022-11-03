@@ -1,5 +1,6 @@
 let products = JSON.parse(localStorage.getItem("products")),
-    totalPrice;
+    totalPrice = 0;
+const totalText = document.getElementById("total-price");
 
 async function generateCart() {
     try {
@@ -36,6 +37,8 @@ async function generateCart() {
             cartItem.append(cartImg, cartText, cartPrice);
             cartCont.appendChild(cartItem);
 
+            totalPrice += data.price * product.quantity;
+            totalText.textContent = totalPrice;
         }
     } catch (error) {
         console.error(error);
