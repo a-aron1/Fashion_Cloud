@@ -38,3 +38,8 @@ function fixName(name) {
 }
 
 generateProduct();
+
+// alert for add to cart
+function btnClick() {
+    alert("Your product has been added to the cart");
+}
