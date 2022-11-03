@@ -1,6 +1,9 @@
 body {
     background-color: #E9EFF5;
     font-family: 'Roboto';
+    min-height: 99vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
