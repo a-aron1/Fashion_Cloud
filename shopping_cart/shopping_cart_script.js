@@ -2,6 +2,13 @@ let products = JSON.parse(localStorage.getItem("products")),
     totalPrice = 0;
 const totalText = document.getElementById("total-price");
 
+checkoutClose.addEventListener("click", ()=> {
+    location.href = "../index.html";
+    window.localStorage.clear();
+    cartContainer.removeChild();
+})
+
+
 async function generateCart() {
     try {
         for (product of products) {
@@ -9,23 +16,26 @@ async function generateCart() {
             const data = await response.json();
             const fixedTitle = data.title.toLowerCase().replace((/(?<=\b)\w/g), match => match.toUpperCase());
 
-            const cartCont = document.getElementById("cart-container");
-                const cartItem = createItems("div", ...[,], "row");
-                cartItem.classList.add("cart-item")
+            const cartItem = createItems("div", ...[,], "row");
+            cartItem.classList.add("cart-item")
 
-                const cartImg = createItems("img", ...[,], "cart-img");
-                cartImg.src = data.thumbnail;
+            const cartImg = createItems("img", ...[,], "cart-img");
+            cartImg.src = data.thumbnail;
 
-                const cartText = createItems("div", ...[,], "cart-text");
-                cartText.classList.add("col");
-                    const cartHeader = createItems("h4", fixedTitle, ...[,]);
-                    const quantityForm = createItems("form", ...[,], "quantity-form");
-                        const inputGrp = createItems("div", ...[,], "input-group");
-                            const label = createItems("label", "Quantity", "form-label");
-                            const select = createSelectGroup(product.quantity);
-                        inputGrp.append(label, select);
-                    quantityForm.appendChild(inputGrp);
-                cartText.append(cartHeader, quantityForm);
+            const cartText = createItems("div", ...[,], "cart-text");
+            cartText.classList.add("col");
+                const cartHeader = createItems("h4", fixedTitle, ...[,]);
+                const inputGrp = createItems("div", ...[,], "input-group");
+                    const label = createItems("label", "Quantity", "form-label");
+                    const select = createSelectGroup(product.quantity);
+                    select.addEventListener("change", (e) => {
+                        totalPrice -= data.price * product.quantity;
+                        totalPrice += data.price * e.target.value;
+                        changeQuantity(product.productId, e.target.value);
+                        totalText.textContent = `$${totalPrice}`;
+                    })
+                inputGrp.append(label, select);
+            cartText.append(cartHeader, inputGrp);
 
             const cartPrice = createItems("div", ...[,], "col-2");
                 cartPrice.classList.add("cart-price");
@@ -42,7 +52,7 @@ async function generateCart() {
                 cartPrice.append(deleteBtn, price);
 
             cartItem.append(cartImg, cartText, cartPrice);
-            cartCont.appendChild(cartItem);
+            cartContainer.appendChild(cartItem);
 
             totalPrice += data.price * product.quantity;
             totalText.textContent = `$${totalPrice}`;
@@ -77,6 +87,15 @@ function createSelectGroup(quantity) {
         formSelect.add(option);
     }
     return formSelect;
+}
+
+function changeQuantity(productId, quantity) {
+    let setProducts = products.map(product => {
+        if (product.productId == productId) {
+            product.quantity = quantity;
+        }
+    })
+    localStorage.setItem("products", JSON.stringify(setProducts));
 }
 
 function removeProduct(productId) {

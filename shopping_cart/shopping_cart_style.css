@@ -23,7 +23,7 @@ h5 {
     margin-bottom: 4rem;
 }
 
-#cart-container {
+#cartContainer {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -92,7 +92,7 @@ h5 {
     padding: 1.1rem;
 }
 
-#checkout-cart-btn {
+#checkoutCartBtn {
     width: 12rem;
     height: 2.5rem;
     border-radius: 10rem;

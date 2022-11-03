@@ -18,13 +18,29 @@
 
     <main class="d-flex flex-column justify-content-center align-items-center main-cart">
         <h3 class="d-inline-flex">Your Items</h3>
-        <div id="cart-container" class="col d-flex justify-content-center">
+        <div id="cartContainer" class="col d-flex justify-content-center">
         </div>
         <div id="total-cont">
             <h5>Total:</h5>
             <h6 id="total-price" class="cart-price"></h6>
         </div>
-        <button id="checkout-cart-btn" type="button" class="btn btn-dark">Proceed to Checkout</button>
+        <button id="checkoutCartBtn" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#checkoutModal">Proceed to Checkout</button>
+
+        <div id="checkoutModal" class="modal" tabindex="-1"  data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Thank you!</h5>
+                </div>
+                <div class="modal-body">
+                  <p>You have successfully checked out.</p>
+                </div>
+                <div class="modal-footer">
+                  <button id="checkoutClose" type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </main>
 
     <!-- Bootstrap -->
