@@ -29,7 +29,7 @@ h3 {
 }
 
 #product_content {
-    max-width: 40rem;
+    max-width: 35rem;
     min-height: 30rem;
     padding: 3rem;
     background-color: white;
@@ -55,6 +55,8 @@ h3 {
 #price {
     font-size: 1.5rem;
     font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 h3, #rating {
@@ -67,7 +69,7 @@ h3, #rating {
 }
 
 #category {
-    margin-bottom: 0;
+    margin-bottom: .5rem;
 }
 
 #quantity-form {
