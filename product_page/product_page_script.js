@@ -49,7 +49,6 @@ cartBtn.addEventListener("click", () => {
 })
 
 generateProduct();
-generateProduct();
 
 // alert for add to cart
 function btnClick() {
