@@ -21,42 +21,35 @@
 
     <!-- Bootstrap nav-bar -->
     <nav class="navbar navbar-expand-lg bg-light navbar navbar-light navbar-expand-md bg-faded bottomLineNav">
-        <div class="container navContainer">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-          <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-            
-            <!-- image link -->
-            <a class="navbar-brand d-flex w-50 mr-auto" href="./index.html">
+      <div class="container navContainer">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+          
+          <!-- image link -->
+          <a class="navbar-brand col-4" href="./index.html">
             <img src="./Images/Fashion_Cloud_image_01.png" alt="..." height="50">
-          </a>
-            
-            <ul class="nav navbar-nav ml-auto w-100 justify-content-center">
-                <li class="nav-item">
-                    <form class="d-flex" role="search">
+          </a>     
 
-                        <!-- //search field -->
-                    <div class = "searchBarClass_1">
-                      <input class="form-control me-2" type="search" placeholder="Search Products" aria-label="Search">
-                    </div>
-                    <div class = "searchIcon"></div>
-                      <input type="image" src="./Images/search_icon.png" alt="Submit" width="48" height="48">
-                    
-                      <!-- will use a image instead of a button -->
-                      <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                    
-                    </form>  
-                </li>
-            </ul>
+          <form class="d-flex col-4" role="search">
+            <!-- //search field -->
+            <div class = "searchBarClass_1 me-3">
+              <input class="form-control" type="search" placeholder="Search Products" aria-label="Search">
+            </div>
+            <!-- <div class = "searchIcon"></div> -->
+            <input type="image" src="./Images/search_icon.png" alt="Submit" width="45" height="45">
+            <!-- will use a image instead of a button -->
+            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+          </form>  
 
-            <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="./Images/shopping_cart.png" alt="Please search again" width="48" height="48"></a>
-                </li>
-            </ul>
-          </div>
+          <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="./Images/shopping_cart.png" alt="Please search again" width="48" height="48"></a>
+              </li>
+          </ul>
         </div>
+      </div>
     </nav>
     
     <!--  Updated lowerNavBar -->
